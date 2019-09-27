@@ -1,0 +1,17 @@
+hi
+
+
+<%= @episode.date %>
+
+<%= @episode.guests %>
+
+<%= @episode.lists %>
+
+
+<% @episode.guests.each do |x| %>
+  <li><%= x.name %></li>
+<% end %>
+
+<% @episode.lists.each do |x| %>
+  <li><%= x.guest %></li>
+<% end %>

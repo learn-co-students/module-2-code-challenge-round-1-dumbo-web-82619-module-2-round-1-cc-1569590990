@@ -25,3 +25,4 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+L1 = List.create(episode_id: 1, guest_id: 1, rate:1, fieldname: 1 )
