@@ -1,0 +1,16 @@
+<h1><%= @guest.name %></h1><br><br>
+
+<h2>Occupation: <%= @guest.occupation.titleize %></h2><br>
+
+<h2>Guest Appearances:</h1> 
+
+<ul>
+<% @episodes_list.each do |episode| %>
+    <li><%= link_to "Episode #{episode.number}", episode_path(episode) %></li>
+<% end %>
+</ul>
+
+<br>
+
+<%= link_to "Make a Guest Appearance", new_appearance_path %><br>
+<%= link_to "Return to Index", guests_path%>
