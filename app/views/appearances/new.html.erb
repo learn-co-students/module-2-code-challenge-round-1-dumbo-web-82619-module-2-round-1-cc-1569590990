@@ -1,0 +1,12 @@
+<h1>Show page</h1>
+
+<%= form_for  @appearance do |f| %>
+<%= f.label :guest_id %>
+  <%= f.collection_select :guest, Guest.all, :id, :name
+ %>
+ <%= f.collection_select :episode, Episode.all, :id, :date %>
+ 
+
+
+ <%= f.submit %>
+<% end %>
