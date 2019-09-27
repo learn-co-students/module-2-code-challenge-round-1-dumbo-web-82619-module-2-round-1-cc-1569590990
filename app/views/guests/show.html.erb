@@ -1,0 +1,15 @@
+<h1><%= @guest.name %></h1>
+<hr>
+<%= button_to "Back to Guests", guests_path, method: :get %>
+<h3>Occupation: <%= @guest.occupation %></h3>
+<% if @guest.appearances != [] %>
+    <h3>Appearances:</h3>
+    <ul>
+    <% @guest.appearances.each do |appearance| %>
+        <li>
+        Episode <%= appearance.episode.number %>
+        <%= link_to "Go to episode", episode_path(appearance.episode) %>
+        </li>
+    <% end %>
+    </ul>
+<% end %>

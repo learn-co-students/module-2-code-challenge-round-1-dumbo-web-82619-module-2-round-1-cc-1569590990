@@ -1,7 +1,8 @@
 <h1>All Episodes</h1>
-
+<hr>
+<%= button_to "Create New Appearance", new_appearance_path, method: :get %>
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <li><%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode_path(episode) %></li>
   <% end %>
 </ul>

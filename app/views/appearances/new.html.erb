@@ -1,0 +1,32 @@
+<h1>Create a New Appearance</h1>
+<hr>
+<%= button_to "Back to Episodes", episodes_path, method: :get %>
+<%= button_to "Back to Guests", guests_path, method: :get %>
+<p>
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <font color="red">
+            <li>
+            <%= error %>
+            </li>
+            </font>
+        <% end %>
+    </ul>
+<% end %>
+</p>
+
+<%= form_for @appearance do |f| %>
+
+    <%= f.label :guest_id %>
+    <%= f.collection_select :guest_id, @guests, :id, :name %>
+    <br><br>
+    <%= f.label :episode_id %>
+    <%= f.collection_select :episode_id, @episodes, :id, :number %>
+    <br><br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <br><br>
+    <%= f.submit %> 
+    
+<% end %>

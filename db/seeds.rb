@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Appearance.destroy_all
 Guest.destroy_all
+Episode.destroy_all
 
 require 'csv'
 
@@ -25,3 +27,9 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+a1 = Appearance.create(guest_id: 1, episode_id: 1, rating: 1)
+a2 = Appearance.create(guest_id: 2, episode_id: 2, rating: 5)
+a3 = Appearance.create(guest_id: 3, episode_id: 1, rating: 4)
+a4 = Appearance.create(guest_id: 2, episode_id: 3, rating: 5)
+
+puts "It has been seeded!"
