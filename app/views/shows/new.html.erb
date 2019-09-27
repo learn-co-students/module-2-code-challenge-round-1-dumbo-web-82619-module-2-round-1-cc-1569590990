@@ -1,0 +1,8 @@
+<h1>Create a new Episode!</h1>
+
+<%= form_for :show do |f| %>
+  Guest: <%= f.text_field :first_name %><br />
+  Episode : <%= f.text_field :last_name %><br />
+  Rating : <%= f.text_area :biography %><br />
+  <%= f.submit %>
+<% end %>
