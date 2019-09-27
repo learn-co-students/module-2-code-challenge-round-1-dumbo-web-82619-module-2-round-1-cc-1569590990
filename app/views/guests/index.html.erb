@@ -1,4 +1,6 @@
 <h1>All The Guests</h1>
+<%= button_to "All Episodes", episodes_path, :method => :get %>
+<%= button_to "Create Appearance", new_appearance_path, :method => :get %>
 
 <ul>
   <% @guests.each do |guest| %>
