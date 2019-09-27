@@ -1,0 +1,14 @@
+<h1>Make a new Appearance!</h1>
+
+
+<%= form_for @appearance do |f| %>
+<%= f.collection_select(:guest_id, Guest.all, :id, :name, :prompt => true) %>
+<%= f.collection_select(:episode_id, Episode.all, :id, :date, :prompt => true) %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+
+<%= f.submit %>
+
+ <% end %>
+
+
