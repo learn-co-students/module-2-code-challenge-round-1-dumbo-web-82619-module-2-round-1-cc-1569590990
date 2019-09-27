@@ -1,0 +1,2 @@
+class AppearanesController < ApplicationController
+end
