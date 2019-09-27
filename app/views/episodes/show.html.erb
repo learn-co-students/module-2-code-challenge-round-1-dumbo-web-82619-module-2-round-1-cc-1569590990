@@ -1,0 +1,10 @@
+<h1>Tonight on the Late Show!</h1>
+
+<ul>
+  <% @episode.guests.each do |guest| %>
+    <li><%= guest.name %></li>
+  <% end %>
+</ul>
+<br>
+<h3>Airs <%= @episode.date %></h3>
+<p>Rating: <%# @episode.rating DIS WRONG %></p>
